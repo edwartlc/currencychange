@@ -4,16 +4,13 @@ import com.edwartlc.currencychange.modelos.ConsultaConversion;
 import com.edwartlc.currencychange.modelos.Conversion;
 import com.edwartlc.currencychange.modelos.GuardaConversion;
 
-import java.time.LocalDateTime;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) {
         Scanner lectura = new Scanner(System.in);
         ConsultaConversion consulta = new ConsultaConversion();
-        GuardaConversion guardaConversion = new GuardaConversion();
-        String registro = "";
+        GuardaConversion registro = new GuardaConversion();
 
         int salir = 0;
         while (salir != 9) {
@@ -38,15 +35,11 @@ public class Principal {
                     System.out.println("Ingrese el valor que desea convertir: ");
                     var valorAConvertir = Double.valueOf(lectura.nextLine());
                     Conversion conversion = consulta.conversionMoneda(opcionElegida);
-                    registro = conversion.base_code() + " a " +
-                            conversion.target_code() + " - Fecha/hora consulta: " +
-                            LocalDateTime.now();
-                    guardaConversion.guardarConversion(registro);
-                    System.out.println("El valor: $" +  valorAConvertir + " " +
-                            conversion.base_code() + " corresponde a: $" +
-                            Math.round(conversion.conversion_rate() *
-                            valorAConvertir * 100) / 100.00 + " " +
-                            conversion.target_code());
+                    registro.guardarConversion(conversion);
+                    System.out.println("El valor: $" +  String.format("%.2f", valorAConvertir) +
+                            " " + conversion.base_code() + " corresponde a: $" +
+                            String.format("%.2f", conversion.conversion_rate() * valorAConvertir) +
+                            " " + conversion.target_code());
                 } else {
                     System.out.println("¡Debe ingresar una opción válida!");
                 }
@@ -60,7 +53,7 @@ public class Principal {
 
         System.out.println("*******************************************************************\n");
         System.out.println("Conversiones realizadas: \n");
-        for (String conversion : guardaConversion.getListaDeConversiones()) {
+        for (String conversion : registro.getListaDeConversiones()) {
             System.out.println(conversion);
         }
         System.out.println("\n*******************************************************************");
