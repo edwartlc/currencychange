@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5200b6e-a184-46e7-bdb9-eacd2bc522eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/edwartlc/currencychange/modelos/ConsultaCambio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/edwartlc/currencychange/modelos/Moneda.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/edwartlc/currencychange/modelos/GuardaConversion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/currencychange.iml" beforeDir="false" afterPath="$PROJECT_DIR$/currencychange.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/edwartlc/currencychange/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/edwartlc/currencychange/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/edwartlc/currencychange/modelos/ConsultaCambio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/edwartlc/currencychange/modelos/ConsultaConversion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/edwartlc/currencychange/modelos/Moneda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/edwartlc/currencychange/modelos/Conversion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -44,10 +43,10 @@
     "Application.Principal.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "development",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/OneDrive/Proyectos/compras",
+    "last_opened_file_path": "E:/OneDrive/Proyectos/currencychange",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -63,5 +62,16 @@
       <updated>1728320882691</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

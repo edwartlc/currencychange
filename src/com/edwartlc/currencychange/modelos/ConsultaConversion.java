@@ -7,9 +7,11 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.ArrayList;
+import java.util.List;
 
-public class ConsultaCambio {
-    public Moneda conversion(int opcionElegida) {
+public class ConsultaConversion {
+    public Conversion conversionMoneda(int opcionElegida) {
         String monedaBase = "";
         String monedaObjetivo = "";
 
@@ -52,7 +54,7 @@ public class ConsultaCambio {
         try {
             HttpResponse<String> response = client
                     .send(request, HttpResponse.BodyHandlers.ofString());
-            return new Gson().fromJson(response.body(), Moneda.class);
+            return new Gson().fromJson(response.body(), Conversion.class);
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }
